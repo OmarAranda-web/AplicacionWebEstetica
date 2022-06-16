@@ -16,16 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
   if (empty($errores)) {
 
-    $query = "select concat(nombre,' ',apellido1), permiso from usuario where email='$email' and contrasenia='$password'";
+    $query = "select id_usuarios,concat(nombre,' ',apellido1), permiso from usuario where email='$email' and contrasenia='$password'";
     $resultado = mysqli_query($db, $query);
     $user = mysqli_fetch_array($resultado);
     if ($resultado->num_rows) {
 
       //Variables de sesion
       session_start();
-      $_SESSION['usuario'] = $user[0];
+      $_SESSION['usuario'] = $user[1];
       $_SESSION['admin'] = false;
-
+      $_SESSION['idUsuario']=$user[0];
     
       
       if ($user[1] == '1') {

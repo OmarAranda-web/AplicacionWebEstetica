@@ -3,14 +3,23 @@
 require('../conexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $servicio=$_POST['servicio'];
-    $precio=$_POST['precio'];
-    $tiempo=$_POST['tiempo'];
-    $query="call proc_insertar_servicio('$servicio','$precio','$tiempo')";
-    $resultado = mysqli_query($db, $query);
+    $idUser=$_POST['idUsuario'];
+    $alias=$_POST['alias'];
+    $fecha=$_POST['fecha'];
+    $hora=$_POST['hora'];
+    $local=$_POST['local'];
+    $servicios=$_POST['servicios'];
 
-    if ($resultado) {
-        //Redireccionamos al usuario
-        header('Location: ../../verServiciosphp?resultado=1');
+    if(! empty($servicios)){
+        foreach($servicios as $servicio){
+            echo "<p>$servicio</p><br>";
+        }
+    }else{
+        echo "<p>Selecciona algo</p>";
     }
+
+    
 }
+
+
+?>

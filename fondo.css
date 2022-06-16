@@ -1,0 +1,18 @@
+body {
+    background-image: url('IMG/Fondo.png') !important;
+  }
+
+label{
+    border: 3px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px white;
+}
+
+img{
+ 
+  margin-top: 6rem !important;
+}
+
+input[type="text"] {
+  border: 2px solid rgb(33, 83, 139);
+}

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor-principal{
+    width: auto;
+    height: 700px;
+    grid-gap: 5px;
+    text-align: center;
+    display: grid;
+    margin: 0 auto;
+    grid: 13% 5% 5% 77% 5% / repeat(4, 25%);
+    grid-template-areas:
+    "aside1 header header header" 
+    "aside1 span1 span1 span1"
+    "aside1 nav nav nav"
+    "aside1 section section section"
+    "aside1 footer footer footer"
+}
+span{
+    grid-area: span1;
+}
+header{
+    grid-area: header;
+}
+.aside1{
+    grid-area: aside1;
+   
+}
+footer{
+    grid-area: footer;
+}
+.header2{
+    display: flex !important;
+    color: white;
+    background-color: rgb(142, 159, 189);
+}
+.fondo12{
+    background-image: url('../IMG/Fondo.png');
+    display: flex;
+    grid-area: section;
+    justify-content: center;
+}
+.imagenServicios{
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+}
+.tabla1{
+    padding: 10px;
+    margin: 10px;
+}
+.section{
+    width: 90rem;
+}
+nav{
+    grid-area: nav;
+}
+.img{
+    margin-left: 300px;
+}

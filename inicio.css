@@ -1,0 +1,46 @@
+.centrar{
+    justify-content: center !important;
+}
+aside{
+    background-color: rgb(5, 2, 61) !important;
+}
+input{
+    background-color: blue;
+}
+
+.fondoDiv{
+    background-image: url('IMG/fondo2.png');
+}
+
+.antifooter{
+    background-color: aqua;
+    justify-content: left;
+}
+.img{
+    width: 160px !important;
+    height: 65px !important;
+}
+.NombreUsuario{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.boton{
+    margin: 10px;
+    margin-right: 100px;
+}
+
+.tabla{
+    width: 580px !important;
+    height: auto;
+    margin-left: 260px;
+    margin-right: 20px;
+    display: table-cell; 
+   vertical-align: middle;
+}
+.servicios{
+    justify-content: center;
+}
+.agregarcita{
+    margin-left: 10px !important;
+}

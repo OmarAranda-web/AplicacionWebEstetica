@@ -6,6 +6,8 @@ if (!isset($_SESSION)) {
 require 'conexion/conexion.php';
 $auth = $_SESSION['admin'] ?? false;
 $user = $_SESSION['usuario'];
+
+if ($auth) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,3 +94,8 @@ $user = $_SESSION['usuario'];
 </body>
 
 </html>
+<?php
+  }else{
+   header('Location:index.php');
+  }
+?>

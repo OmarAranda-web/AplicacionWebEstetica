@@ -8,6 +8,8 @@
   $user=$_SESSION['usuario'];
   $clave=$_GET['clave'];
 
+  if ($auth) {
+    # code...
   //Recuperando los datos del servicio
   $query="select nombre_servicio, precio, tiempo from servicio where id_servicio='$clave'";
   
@@ -113,3 +115,8 @@
 </body>
 
 </html>
+<?php
+  }else{
+   header('Location:index.php');
+  }
+?>

@@ -4,6 +4,9 @@
   }
   $auth=$_SESSION['admin'] ?? false;
   $user=$_SESSION['usuario'];
+
+  if ($auth) {
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,3 +104,9 @@
 </body>
 
 </html>
+
+<?php
+  }else{
+   header('Location:index.php');
+  }
+?>

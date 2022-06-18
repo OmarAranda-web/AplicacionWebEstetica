@@ -8,6 +8,8 @@
   $user=$_SESSION['usuario'];
   $id=$_GET['id'];
 
+  if ($auth) {
+    # code...
   //Recuperando los datos del servicio
   $query="select nombre_local,direccion_local from locales where  id_local='$id'";
   $result=mysqli_query($db,$query);
@@ -100,3 +102,8 @@
 </body>
 
 </html>
+<?php
+  }else{
+   header('Location:index.php');
+  }
+?>

@@ -32,7 +32,7 @@ $idUser=$_SESSION['idUsuario'];
 
     <header class="content-header header2">
     <h2 class="NombreUsuario"><?php echo $user; ?></h2>
-      <button type="button" class="btn btn-secondary boton">Cerrar sesion</button>
+      <a  href="./cerrarSesion.php" class="btn btn-secondary boton">Cerrar sesion</a>
       <img src="IMG/logo2.png" class="img">
     </header>
     <span class="placeholder col-12 bg-secondary"></span>

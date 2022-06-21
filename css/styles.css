@@ -4,10 +4,10 @@
 }
 .contenedor-principal{
     width: auto;
-    height: 700px;
+    height: auto;
     grid-gap: 5px;
     text-align: center;
-    display: grid;
+   display: grid;
     margin: 0 auto;
     grid: 13% 5% 5% 77% 5% / repeat(4, 25%);
     grid-template-areas:

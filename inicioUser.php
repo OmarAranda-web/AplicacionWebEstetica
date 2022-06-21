@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
 }
 $auth = $_SESSION['admin'] ?? false;
 $user = $_SESSION['usuario'];
+$idUser = $_SESSION['idUsuario'];
 if ($user) {
 ?>
   <!DOCTYPE html>
@@ -14,10 +15,9 @@ if ($user) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar cita</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="inicioUser.css">
   </head>
 
   <body>
@@ -32,38 +32,16 @@ if ($user) {
       </header>
 
 
-      <aside class="aside1">
-        <a class="brand-link aside1">
-          <img src="IMG/logoblanco.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">Estetica Union</span>
-        </a>
-        <a class="brand-link text-center">
-          <label>MENU</label>
-        </a>
-        <a class="brand-link">
-          <a href="InsertarServicio.php" class="btn btn-primary col-12">Insertar Servicio</a>
-          <br><br>
-          <a href="verservicios.php" class="btn btn-primary col-12">Ver servicios</a>
-          <br><br>
-          <a class="btn btn-danger col-12" href="insertarLocales.php">Insertar Locales</a>
-          <br><br>
-          <a class="btn btn-danger col-12" href="verLocales.php">Ver Locales</a>
-        </a>
-      </aside>
-
-
       <nav>
         <h3>Citas</h3>
       </nav>
-
-
       <section class="fondo12">
         <section class="section">
 
           <section class="citas-container">
                 <?php
                 require 'conexion/conexion.php';
-                $query = "call ver_citas_admin()";
+                $query = "call ver_citas_user('$idUser')";
                 $result = mysqli_query($db, $query);
 
                 while ($cita = mysqli_fetch_array($result)) {
@@ -71,12 +49,12 @@ if ($user) {
               <article class='cita'>
               <section class='info-cita'>
                 <p class='alias-cita'>$cita[1]</p>
-                <p class='alias-cita'>Usuario:$cita[2]</p>
+              
                 <section class='date-cita'>
+                  <p>$cita[2]</p>
                   <p>$cita[3]</p>
-                  <p>$cita[4]</p>
                 </section>
-                <p>$$cita[5]</p>
+                <p>$$cita[4]</p>
               </section>
 
               <a href='conexion/citas/cancelarCita.php?id=$cita[0]' class='btn-cancelar'>Cancelar</a>
@@ -85,14 +63,13 @@ if ($user) {
               ";
                 }
                 ?>
+                  <a href="AgregarCita.php" class="add-cita">+</a>
           </section>
         </section>
         <section class="aside2">
           <img src="IMG/InformacionSitio.gif" class="imagenServicios">
         </section>
       </section>
-
-
       <footer>
         <h4>@2022</h4>
       </footer>

@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['idUsuario']=$user[0];
     
       
-      if ($user[2] == '1') {
+      if ($user[2] == 1) {
         $_SESSION['admin'] = true;
         header('Location: inicio.php');
        

@@ -145,7 +145,7 @@ input{
 
 .add-cita{
     margin-top: 3rem;
-  
+    color: white;
     background-color: green;
     width: 50px;
     padding: 1rem;
@@ -162,4 +162,9 @@ input{
 .form-add-cita{
     display: flex;
     gap: 5rem;
+}
+
+.alias-cita{
+    color: black;
+    font-weight: bold;
 }

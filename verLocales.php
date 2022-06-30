@@ -30,11 +30,10 @@ if ($auth) {
   <main class="contenedor-principal">
 
 
-    <header class="content-header header2">
+  <header class="content-header header2">
       <h2 class="NombreUsuario"><?php echo $user; ?></h2>
-      <button type="button" class="btn btn-secondary boton">Cerrar sesion</button>
-      <img src="IMG/logo2.png" class="img">
-
+      <a href="./cerrarSesion.php" class="btn btn-secondary boton">Cerrar sesion</a>
+     <a href="inicioUser.php"> <img src="IMG/logo2.png" class="img"></a>
     </header>
     <span class="placeholder col-12 bg-secondary"></span>
 

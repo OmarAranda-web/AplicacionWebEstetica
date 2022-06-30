@@ -9,22 +9,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hora=$_POST['hora'];
     $local=$_POST['local'];
     $servicios=$_POST['servicios'];
-
+    $cita=$_POST['idCita'];
     //Registrar una cita
-   $query="call proc_insertar_cita('$alias','$fecha','$hora','$idUser','$local')";
+   $query="call editar_cita('$cita','$alias','$fecha','$hora','$local')";
    $resultCita=mysqli_query($db,$query);
- 
-    echo "<h2>$query</h2>";
-   
-    $idCita=mysqli_fetch_array($resultCita);
-    $idCita=$idCita[0];
+
 
     mysqli_close($db);
     require('../conexion.php');
    
     if(! empty($servicios)){
         foreach($servicios as $servicio){
-            $queryDetalle="call proc_insertar_detCita('$idCita', '$servicio')";
+            $queryDetalle="call proc_insertar_detCita('$cita', '$servicio')";
             $resultDetalle=mysqli_query($db,$queryDetalle);
             if (!$resultDetalle) {
                 $error=mysqli_error($db);

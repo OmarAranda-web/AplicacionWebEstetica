@@ -48,7 +48,7 @@ if ($user) {
                   echo "
               <article class='cita'>
               <section class='info-cita'>
-                <p class='alias-cita'>$cita[1]</p>
+                <a href='conexion/crearPDF.php?cita=$cita[0]' class='alias-cita' target='_blank'>$cita[1]</a>
               
                 <section class='date-cita'>
                   <p>$cita[2]</p>
@@ -58,7 +58,8 @@ if ($user) {
               </section>
 
               <a href='conexion/citas/cancelarCita.php?id=$cita[0]' class='btn-cancelar'>Cancelar</a>
-            </article>
+              <a href='./editarCita.php?id=$cita[0]' class='btn-cancelar'>Editar</a>
+              </article>
               
               ";
                 }

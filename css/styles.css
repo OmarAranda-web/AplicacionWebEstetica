@@ -4,7 +4,7 @@
 }
 .contenedor-principal{
     width: auto;
-    height: auto;
+    height: 700px;
     grid-gap: 5px;
     text-align: center;
    display: grid;
@@ -17,6 +17,8 @@
     "aside1 section section section"
     "aside1 footer footer footer"
 }
+
+
 span{
     grid-area: span1;
 }
@@ -31,6 +33,7 @@ footer{
     grid-area: footer;
 }
 .header2{
+    height: 5rem;
     display: flex !important;
     color: white;
     background-color: rgb(142, 159, 189);

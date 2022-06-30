@@ -9,6 +9,9 @@ require 'conexion/conexion.php';
 $auth = $_SESSION['admin'] ?? false;
 $user = $_SESSION['usuario'];
 $idUser = $_SESSION['idUsuario'];
+if ($user) {
+
+
 ?>
 
 <!DOCTYPE html>
@@ -102,7 +105,7 @@ $idUser = $_SESSION['idUsuario'];
           </section>
 
           <hr class="mb-4">
-          <button class="btn btn-primary btn-lg btn-block" type="submit">insertar</button>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="btnInsertar">Insertar</button>
 
       </section>
 
@@ -116,4 +119,11 @@ $idUser = $_SESSION['idUsuario'];
   </main>
 </body>
 
+<script src="validarForm.js"></script>
+
 </html>
+<?php
+} else {
+  header('Location:index.php');
+}
+?>

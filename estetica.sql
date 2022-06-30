@@ -11,7 +11,7 @@
  Target Server Version : 80029
  File Encoding         : 65001
 
- Date: 21/06/2022 17:11:49
+ Date: 22/06/2022 15:29:56
 */
 
 SET NAMES utf8mb4;
@@ -35,7 +35,7 @@ CREATE TABLE `cita` (
   KEY `idlocal` (`idlocal`) USING BTREE,
   CONSTRAINT `idlocal` FOREIGN KEY (`idlocal`) REFERENCES `locales` (`id_local`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `idUsuarios` FOREIGN KEY (`idUsuarios`) REFERENCES `usuario` (`id_usuarios`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of cita
@@ -46,6 +46,25 @@ INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`,
 INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (9, 'Corte jose', '2022-06-24', '17:30:00', '0', 5, 5, 270);
 INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (10, 'Corte jose', '2022-06-25', '17:00:00', '1', 5, 5, 0);
 INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (11, 'Teñido de pelo', '2022-06-25', '18:09:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (12, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (13, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (14, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (15, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (16, 'Cita 2', '2022-06-23', '18:18:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (17, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (18, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (19, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (20, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (21, 'Cita 3', '2022-06-24', '14:45:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (22, 'cita 4', '2022-06-24', '14:49:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (23, 'cita 4', '2022-06-24', '14:49:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (24, 'cita 5', '2022-06-11', '14:50:00', '1', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (25, 'cita 6', '2022-06-23', '15:05:00', '1', 5, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (26, 'cita chida', '2022-06-22', '15:00:00', '1', 3, 3, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (27, 'cita chida 2', '2022-06-18', '15:20:00', '1', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (28, 'cita chida 2', '2022-06-18', '15:20:00', '1', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (29, 'cita chida ahora si', '2022-06-17', '15:28:00', '1', 5, 5, 0);
+INSERT INTO `cita` (`id_cita`, `alias`, `fecha`, `hora`, `status`, `idUsuarios`, `idlocal`, `total_cita`) VALUES (30, 'ahora si va el bueno', '2022-06-24', '15:30:00', '1', 5, 5, 80);
 COMMIT;
 
 -- ----------------------------
@@ -62,7 +81,7 @@ CREATE TABLE `detalle_cita` (
   KEY `id_cita_dcita` (`id_cita_dcita`) USING BTREE,
   CONSTRAINT `id_cita_dcita` FOREIGN KEY (`id_cita_dcita`) REFERENCES `cita` (`id_cita`) ON DELETE RESTRICT ON UPDATE CASCADE,
   CONSTRAINT `id_servicio_dcita` FOREIGN KEY (`id_servicio_dcita`) REFERENCES `servicio` (`id_servicio`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of detalle_cita
@@ -70,6 +89,7 @@ CREATE TABLE `detalle_cita` (
 BEGIN;
 INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (3, 6, 3, 2);
 INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (4, 9, 4, 3);
+INSERT INTO `detalle_cita` (`id_dtalle_cita`, `id_cita_dcita`, `id_servicio_dcita`, `cantidad_cita`) VALUES (5, 30, 5, 1);
 COMMIT;
 
 -- ----------------------------
@@ -245,11 +265,9 @@ delimiter ;
 -- ----------------------------
 DROP PROCEDURE IF EXISTS `proc_insertar_cita`;
 delimiter ;;
-CREATE PROCEDURE `proc_insertar_cita`(p_alias varchar(255),
-p_fecha varchar(255),
-p_hora varchar(255),
-p_usuario int,
-p_local varchar(255))
+CREATE PROCEDURE `proc_insertar_cita`(IN p_alias varchar(255), IN p_fecha varchar(255),
+                                                          IN p_hora varchar(255), IN p_usuario int,
+                                                          IN p_local varchar(255))
 begin
 
 
@@ -258,7 +276,7 @@ then
 		SELECT 'FECHA NO DISPONIBLE' AS MENSAJE_BD;
 else
 	insert cita VALUES(default,trim(p_alias), p_fecha, p_hora, '1', p_usuario, p_local,0);
-	SELECT 'Se hizo la cita' AS MENSAJE_BD;
+	select MAX(id_cita) FROM cita WHERE idUsuarios=p_usuario;
 end if;
 end
 ;;

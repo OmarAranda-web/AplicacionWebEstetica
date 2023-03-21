@@ -74,14 +74,14 @@
             <div class="col-md-6 mb-3">
               <label for="firstName">Nombre del local</label>
               <input type="hidden" id="id" name="id" value=<?php echo "$id";?>>
-              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value=<?php echo "$local[0]";?> required>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="<?php echo "$local[0]";?> " required>
               <div class="invalid-feedback">
                 Escribe el nombre.
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName">Direccion</label>
-              <input type="text" class="form-control" id="direccion" name="direccion" placeholder="" value=<?php echo "$local[1]";?> required>
+              <input type="text" class="form-control" id="direccion" name="direccion" placeholder="" value="<?php echo "$local[1]";?>" required>
               <div class="invalid-feedback">
                 Escribe bien la direcion.
               </div>

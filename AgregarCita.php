@@ -75,6 +75,7 @@ if ($user) {
               <div class="form-group">
                 <label for="local">Local</label>
                 <select class="form-control" id="local" name="local">
+                  <option value="">---SELECCIONE---</option>
                   <?php
                   $query = "Select * from locales where estatus='1'";
                   $result = mysqli_query($db, $query);

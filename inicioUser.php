@@ -39,6 +39,7 @@ if ($user) {
         <section class="section">
 
           <section class="citas-container">
+          <a href="AgregarCita.php" class="add-cita">+</a>
                 <?php
                 require 'conexion/conexion.php';
                 $query = "call ver_citas_user('$idUser')";
@@ -64,7 +65,7 @@ if ($user) {
               ";
                 }
                 ?>
-                  <a href="AgregarCita.php" class="add-cita">+</a>
+                  
           </section>
         </section>
         <section class="aside2">

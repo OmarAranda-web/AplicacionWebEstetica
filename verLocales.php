@@ -71,7 +71,7 @@ if ($auth) {
         <tbody>
           <?php
           require 'conexion/conexion.php';
-          $query = 'call estetica.proc_consul_locales()';
+          $query = 'call proc_consul_locales()';
           $result = mysqli_query($db, $query);
           while ($local = mysqli_fetch_array($result)) {
             echo "
